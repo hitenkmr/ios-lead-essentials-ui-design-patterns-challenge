@@ -38,7 +38,7 @@ extension FeedViewController {
 		let ds = tableView.prefetchDataSource
 		let index = IndexPath(row: row, section: feedImagesSection)
 		ds?.tableView?(tableView, cancelPrefetchingForRowsAt: [index])
-	}	
+	}
 
 	private var errorView: ErrorView? {
 		tableView.tableHeaderView as? ErrorView
