@@ -17,6 +17,7 @@ protocol FeedErrorView {
 	func display(_ viewModel: FeedErrorViewModel)
 }
 
+
 final class FeedPresenter {
 	private let feedView: FeedView
 	private let loadingView: FeedLoadingView
@@ -36,7 +37,6 @@ final class FeedPresenter {
 	func didFinishLoadingFeed(with feed: [FeedImage]) {
 		feedView.display(FeedViewModel(feed: feed))
 		loadingView.display(FeedLoadingViewModel(isLoading: false))
-		errorView.display(FeedErrorViewModel(message: nil))
 	}
 
 	func didFinishLoadingFeed(with error: Error) {
