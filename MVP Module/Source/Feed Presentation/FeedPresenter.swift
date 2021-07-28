@@ -30,17 +30,17 @@ final class FeedPresenter {
 
 	func didStartLoadingFeed() {
 		loadingView.display(FeedLoadingViewModel(isLoading: true))
-		errorView.display(FeedErrorViewModel(messgae: nil))
+		errorView.display(FeedErrorViewModel(message: nil))
 	}
 
 	func didFinishLoadingFeed(with feed: [FeedImage]) {
 		feedView.display(FeedViewModel(feed: feed))
 		loadingView.display(FeedLoadingViewModel(isLoading: false))
-		errorView.display(FeedErrorViewModel(messgae: nil))
+		errorView.display(FeedErrorViewModel(message: nil))
 	}
 
 	func didFinishLoadingFeed(with error: Error) {
 		loadingView.display(FeedLoadingViewModel(isLoading: false))
-		errorView.display(FeedErrorViewModel(messgae: Localized.Feed.loadError))
+		errorView.display(FeedErrorViewModel(message: Localized.Feed.loadError))
 	}
 }

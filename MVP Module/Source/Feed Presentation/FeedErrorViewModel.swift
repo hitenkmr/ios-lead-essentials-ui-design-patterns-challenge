@@ -9,5 +9,5 @@
 import Foundation
 
 struct FeedErrorViewModel {
-	let messgae: String?
+	let message: String?
 }
