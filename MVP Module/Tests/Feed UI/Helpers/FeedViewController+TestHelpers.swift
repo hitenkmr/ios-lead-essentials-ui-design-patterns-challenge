@@ -41,7 +41,7 @@ extension FeedViewController {
 	}
 
 	var errorMessage: String? {
-		return self.errorView?.message
+		return errorView?.message
 	}
 
 	func simulateTapOnErrorMessage() {
