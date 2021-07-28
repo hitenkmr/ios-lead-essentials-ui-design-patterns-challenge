@@ -292,17 +292,6 @@ final class FeedUIIntegrationTests: XCTestCase {
 		XCTAssertNil(sut.errorMessage)
 	}
 
-	func test_refreshFeed_rendersNoErrorOnCompletion() {
-		let (sut, _) = makeSUT()
-
-		sut.loadViewIfNeeded()
-
-		XCTAssertNil(sut.errorMessage)
-
-		sut.simulateUserInitiatedFeedReload()
-		XCTAssertNil(sut.errorMessage)
-	}
-
 	func test_errorViewHidesOnTap() {
 		let (sut, loader) = makeSUT()
 
