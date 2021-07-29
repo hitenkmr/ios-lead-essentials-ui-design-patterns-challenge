@@ -29,7 +29,6 @@ final class FeedViewModel {
 			switch result {
 			case .success(let feed):
 				self?.onFeedLoad?(feed)
-				self?.onErrorStateChange?(nil)
 			case .failure:
 				self?.onErrorStateChange?(Localized.Feed.loadError)
 			}
